@@ -8,6 +8,7 @@ import Message from "../components/Message";
 // import Paginate from '../components/Paginate';
 // import ProductCarousel from '../components/ProductCarousel';
 import Meta from "../components/Meta";
+import Hero from "../components/Hero";
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
@@ -19,6 +20,7 @@ const HomeScreen = () => {
 
   return (
     <>
+      <Hero />
       {/* {!keyword ? (
         <ProductCarousel />
       ) : (
@@ -35,7 +37,9 @@ const HomeScreen = () => {
       ) : (
         <>
           <Meta />
-          <h1>Latest Products</h1>
+          <h1 id="pro" className="mt-3">
+            Our Products
+          </h1>
           <Row>
             {data.products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
